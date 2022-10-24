@@ -15,8 +15,6 @@ Para probar las funciones, haz uso tanto de paso de argumentos
 posicionales como argumentos con nombre. */
 
 
-
-
 /*-------------------------------------------------------------*/
   $num = 10346;
   echo "El número <b>".$num."</b> tiene <b>".digitos($num)."</b> de dígitos<br><br>";
@@ -31,7 +29,7 @@ function digitos(int $num):int
 }
 /*-------------------------------------------------------------*/
 
-echo "El dígito que corresponde a la posicion <b>2</b> del número <b>356789</b> es el <b>".digitoN(num: 356789, pos:  4)."</b>";
+echo "El dígito que corresponde a la posicion <b>4</b> del número <b>356789</b> es el <b>".digitoN(num: 536789, pos:  4)."</b>";
 
 function digitoN(int $num, int $pos) : int
 {

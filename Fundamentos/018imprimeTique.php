@@ -13,7 +13,7 @@
     $CantidadGorra = $_GET['gorra'];
     $CantidadZapas = $_GET['zapas'];
     $CantidadCartera = $_GET['cartera'];
-    $TotalProductos=0;
+    $TotalProductos = 0;
 
     $arrayProductos = array(
         array ("Gorra Vans", $CantidadGorra, 25),
@@ -29,7 +29,7 @@
             <th>Cantidad</th>
             <th>Pvp/Ud €</th>
             <th>Pvp/Ud Pesetas</th>
-            <th>Pvp total €</th>
+            <th>Pvp Total €</th>
             <th>pvp Total Pesetas</th>
         </thead>
         <tbody>
