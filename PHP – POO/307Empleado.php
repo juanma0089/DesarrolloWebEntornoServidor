@@ -1,34 +1,22 @@
 <?php
-/*006EmpleadoStatic.php: Copia la clase del ejercicio anterior y modifícala. Completa el 
-siguiente método con una cadena HTML que muestre los datos de un empleado 
-dentro de un párrafo y todos los teléfonos mediante una lista ordenada (para ello, 
-deberás crear un getter para los teléfonos):
+/*007Persona.php: Copia la clase del ejercicio anterior en 307Empleado.php y 
+modifícala.Crea una clase Persona que sea padre de Empleado, de manera que 
+Persona contenga el nombre y los apellidos, y en Empleado quede el salario y los 
+teléfonos.*/
+include_once('007Persona.php');
 
-public static function toHtml(Empleado $emp): string
-*/
+class Empleado extends Persona{
 
-class Empleado{
 
-   
     private array $arrayTelefono = [];
     private static $sueldoTope = 3333;
- 
-    public function __construct(private String $nombre, private String $apellidos, private int $sueldo = 1000)
+
+    public function __construct(String $nombre,String $apellidos, private int $sueldo = 1000)
     {
-
-
+        parent::__construct($nombre, $apellidos);
     }
+  
 
-    public function getNombre()
-    {
-        return $this->nombre;
-    }
-
-    public function getApellido()
-    {
-        return $this->apellidos;
-    }
- 
     public function getSueldo()
     {
         return $this->sueldo;
@@ -40,13 +28,6 @@ class Empleado{
         $this->sueldo = $sueldo;
 
         return $this;
-    }
-
-    public function getNombreCompleto(): string
-    {
-
-
-        return $this->nombre." ".$this->apellidos;
     }
 
     public function debePagarImpuestos(): bool
@@ -95,8 +76,6 @@ class Empleado{
         return self::$sueldoTope;
     }
 
-  //---------------------MODIFICACIÓN PEDIDA----------------------
-
     public function getTelefono()
     {
         $cadena = "";
@@ -109,8 +88,7 @@ class Empleado{
         return $cadena;
     }
 
- //---------------------MODIFICACIÓN PEDIDA----------------------
-    public static function toHtml(Empleado $emp): string{
+   /* public static function toHtml(Empleado $emp): string{
 
     $datosDevueltos = "";
 
@@ -131,7 +109,7 @@ class Empleado{
         }
     
         return $datosDevueltos.$pagaImpuestos;
-}
+}*/
 
 }
 

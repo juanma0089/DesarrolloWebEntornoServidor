@@ -11,7 +11,7 @@ class Empleado{
     private String $nombre;
     private String $apellidos;
     private int $sueldo;
-    private int $telefono;
+    
     //---------------------MODIFICACIÓN PEDIDA----------------------
     private array $arrayTelefono = [];
  

@@ -5,11 +5,9 @@ mediante el constructor (utiliza la sintaxis de PHP8). Si el constructor recibe 
 parámetro, será el sueldo del Empleado. Si no, se le asignará 1000€ como sueldo 
 inicial.*/
 
-use Empleado as GlobalEmpleado;
-
 class Empleado{
 
-    private int $telefono;
+
     private array $arrayTelefono = [];
  
     //---------------------MODIFICACIÓN PEDIDA----------------------
@@ -26,7 +24,7 @@ class Empleado{
 
     public function getApellido()
     {
-        return $this->apellidoa;
+        return $this->apellidos;
     }
  
     public function getSueldo()

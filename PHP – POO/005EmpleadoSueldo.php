@@ -3,11 +3,9 @@
 constante por una variable estática sueldoTope, de manera que mediante 
 getter/setter puedas modificar su valor.*/
 
-use Empleado as GlobalEmpleado;
-
 class Empleado{
 
-    private int $telefono;
+   
     private array $arrayTelefono = [];
     //---------------------MODIFICACIÓN PEDIDA----------------------
     private static $sueldoTope = 3333;
@@ -25,7 +23,7 @@ class Empleado{
 
     public function getApellido()
     {
-        return $this->apellidoa;
+        return $this->apellidos;
     }
  
     public function getSueldo()

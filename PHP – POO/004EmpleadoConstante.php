@@ -3,11 +3,9 @@
 una constante SUELDO_TOPE con el valor del sueldo que debe pagar impuestos, y 
 modifica el código para utilizar la constante.*/
 
-use Empleado as GlobalEmpleado;
-
 class Empleado{
 
-    private int $telefono;
+ 
     private array $arrayTelefono = [];
     //---------------------MODIFICACIÓN PEDIDA----------------------
     const SUELDO_TOPE = 3333;
@@ -25,7 +23,7 @@ class Empleado{
 
     public function getApellido()
     {
-        return $this->apellidoa;
+        return $this->apellidos;
     }
  
     public function getSueldo()
