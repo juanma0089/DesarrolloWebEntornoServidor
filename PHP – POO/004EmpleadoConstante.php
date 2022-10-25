@@ -1,9 +1,7 @@
 <?php
-/*003EmpleadoConstructor.php: Copia la clase del ejercicio anterior y modifícala. 
-Elimina los setters de nombre y apellidos, de manera que dichos datos se asignan 
-mediante el constructor (utiliza la sintaxis de PHP8). Si el constructor recibe un tercer 
-parámetro, será el sueldo del Empleado. Si no, se le asignará 1000€ como sueldo 
-inicial.*/
+/*004EmpleadoConstante.php: Copia la clase del ejercicio anterior y modifícala. Añade 
+una constante SUELDO_TOPE con el valor del sueldo que debe pagar impuestos, y 
+modifica el código para utilizar la constante.*/
 
 use Empleado as GlobalEmpleado;
 
@@ -11,8 +9,9 @@ class Empleado{
 
     private int $telefono;
     private array $arrayTelefono = [];
- 
     //---------------------MODIFICACIÓN PEDIDA----------------------
+    const SUELDO_TOPE = 3333;
+ 
     public function __construct(private String $nombre, private String $apellidos, private int $sueldo = 1000)
     {
 
@@ -51,8 +50,9 @@ class Empleado{
 
     public function debePagarImpuestos(): bool
     {
-
-        return ($this->sueldo > 3333)? true : false;
+        //---------------------MODIFICACIÓN PEDIDA----------------------
+    //para acceder a la constante de SUELDO_tope llamamos a la clase Empleado seguido de :: más la constante  --> empleado::SUELDO_TOPE <---
+        return ($this->sueldo > Empleado::SUELDO_TOPE )? true : false;
    
     }
 
@@ -68,7 +68,7 @@ class Empleado{
         $cadena = "";
 
         foreach ($this->arrayTelefono as $id=>$num) {
-           
+           //si el id es 0 significa que tengo solo un valor sino concateno uno detras de otro
             $cadena.= ($id == 0)? $num : ", ".$num;
         }
 

@@ -1,9 +1,7 @@
 <?php
-/*003EmpleadoConstructor.php: Copia la clase del ejercicio anterior y modifícala. 
-Elimina los setters de nombre y apellidos, de manera que dichos datos se asignan 
-mediante el constructor (utiliza la sintaxis de PHP8). Si el constructor recibe un tercer 
-parámetro, será el sueldo del Empleado. Si no, se le asignará 1000€ como sueldo 
-inicial.*/
+/*005EmpleadoSueldo.php: Copia la clase del ejercicio anterior y modifícala. Cambia la 
+constante por una variable estática sueldoTope, de manera que mediante 
+getter/setter puedas modificar su valor.*/
 
 use Empleado as GlobalEmpleado;
 
@@ -11,8 +9,9 @@ class Empleado{
 
     private int $telefono;
     private array $arrayTelefono = [];
- 
     //---------------------MODIFICACIÓN PEDIDA----------------------
+    private static $sueldoTope = 3333;
+ 
     public function __construct(private String $nombre, private String $apellidos, private int $sueldo = 1000)
     {
 
@@ -51,8 +50,9 @@ class Empleado{
 
     public function debePagarImpuestos(): bool
     {
-
-        return ($this->sueldo > 3333)? true : false;
+    //---------------------MODIFICACIÓN PEDIDA----------------------
+    //para acceder a la variable estatica sueldoTope ecribimos "self" más "::" más "el nombre de la variable"  --> self::$sueldoTope <---
+        return ($this->sueldo > self::$sueldoTope )? true : false;
    
     }
 
@@ -81,6 +81,18 @@ class Empleado{
         $this->arrayTelefono = array_diff($this->arrayTelefono, $this->arrayTelefono);
         
         print_r($this->arrayTelefono);
+    }
+//---------------------MODIFICACIÓN PEDIDA----------------------
+    public function getSueldoTope()
+    {
+        return self::$sueldoTope;
+    }
+//---------------------MODIFICACIÓN PEDIDA----------------------
+    public function setSueldoTope($sueldoTope)
+    {
+       self::$sueldoTope = $sueldoTope;
+
+        return self::$sueldoTope;
     }
 }
 

@@ -49,4 +49,55 @@ $empleado2 = new Empleado("Jairo", "Garcia Barrera");
 echo $empleado1->getNombreCompleto()." sueldo:".$empleado1->getSueldo()."<br>";
 echo $empleado2->getNombreCompleto()." sueldo:".$empleado2->getSueldo();
 */
+//---------------------------------------------------------------------------
+//prueba ejercicio 4
+/*
+include_once('004EmpleadoConstante.php');
+
+$empleado1 = new Empleado("Pablo","Gonzalez Román", 4000);
+
+echo $empleado1->getNombreCompleto()."<br>";
+
+if($empleado1->debePagarImpuestos() == true){
+
+    echo "Debe pagar impuestos al superar los <b>3333€</b> ya que su sueldo es de <b>".$empleado1->getSueldo()."€</b>";
+
+}else{
+
+    echo "No debe pagar impuestos";
+}
+*/
+//---------------------------------------------------------------------------
+//prueba ejercicio 5
+/*
+include_once('005EmpleadoSueldo.php');
+
+$empleado1 = new Empleado("Ruben","Arias Román");
+$empleado1->setSueldo(6950);
+
+echo $empleado1->getNombreCompleto()."<br>";
+
+if($empleado1->debePagarImpuestos() == true){
+
+    echo "Debe pagar impuestos al superar los <b>3333€</b> ya que su sueldo es de <b>".$empleado1->getSueldo()."€</b>";
+
+}else{
+
+    echo "No debe pagar impuestos";
+}
+*/
+//prueba ejercicio 6
+include_once('006EmpleadoStatic.php');
+
+$empleado1 = new Empleado("Juan Manuel","Romalde Marín");
+$empleado1 -> setSueldo(4500);
+$empleado1 -> anyadirTelefono(679673193);
+$empleado1 -> anyadirTelefono(632458164);
+
+echo $empleado1->toHtml($empleado1);
+
+
+
+
+
 ?>

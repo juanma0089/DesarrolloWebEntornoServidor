@@ -12,6 +12,7 @@ class Empleado{
     private String $apellidos;
     private int $sueldo;
     private int $telefono;
+    //---------------------MODIFICACIÓN PEDIDA----------------------
     private array $arrayTelefono = [];
  
     public function getNombre()
@@ -67,14 +68,14 @@ class Empleado{
         return ($this->sueldo > 3333)? true : false;
    
     }
-
+//---------------------MODIFICACIÓN PEDIDA----------------------
     public function anyadirTelefono(int $telefono) : void
     {
 
         array_push($this->arrayTelefono, $telefono);
 
     }
-
+//---------------------MODIFICACIÓN PEDIDA----------------------
     public function listarTelefonos(): string
     {
         $cadena = "";
@@ -86,7 +87,7 @@ class Empleado{
 
         return $cadena;
     }
-
+//---------------------MODIFICACIÓN PEDIDA----------------------
     public function vaciarTelefonos(): void
     {
 
