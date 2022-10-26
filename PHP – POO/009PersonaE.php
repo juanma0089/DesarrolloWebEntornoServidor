@@ -8,9 +8,7 @@ necesario para mostrar y/o editar la edad cuando sea necesario.*/
 class Persona {
   //---------------------MODIFICACIÓN PEDIDA----------------------
 
-    protected $edad;
-
-    public function __construct(protected String $nombre, protected String $apellidos)
+    public function __construct(protected String $nombre, protected String $apellidos, protected $edad)
     {
 
     }
@@ -69,5 +67,3 @@ class Persona {
         return $this;
     }
 }
-
-?>

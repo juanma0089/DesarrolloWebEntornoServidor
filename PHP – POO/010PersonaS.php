@@ -6,13 +6,12 @@ sean estáticos, de manera que obtenga los datos mediante $this.
 function public __toString(): string
 */
 
-class Persona {
+class Persona
+{
 
-    protected $edad;
 
-    public function __construct(protected String $nombre, protected String $apellidos)
+    public function __construct(protected String $nombre, protected String $apellidos, protected $edad)
     {
-
     }
 
     public function getNombre()
@@ -26,7 +25,7 @@ class Persona {
 
         return $this;
     }
- 
+
     public function getApellidos()
     {
         return $this->apellidos;
@@ -43,17 +42,18 @@ class Persona {
     public function getNombreCompleto(): string
     {
 
-        return $this->nombre." ".$this->apellidos;
+        return $this->nombre . " " . $this->apellidos;
     }
 
-    public static function toHtml(Persona $p):string{
+    public static function toHtml(Persona $p): string
+    {
 
-        $datosDevueltos = "<p> <b>Nombre: </b>".$p->getNombreCompleto()."</p>";
+        $datosDevueltos = "<p> <b>Nombre: </b>" . $p->getNombreCompleto() . "<br>" . $p->getEdad() . "</p>";
 
         return $datosDevueltos;
     }
 
-  
+
     public function getEdad()
     {
         return $this->edad;
@@ -74,5 +74,3 @@ class Persona {
         return $this->getNombreCompleto();
     }
 }
-
-?>

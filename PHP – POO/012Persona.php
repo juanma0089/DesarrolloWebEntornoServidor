@@ -1,10 +1,16 @@
 <?php
-/*011PersonaA.php: Copia las clases del ejercicio anterior y modifícalas.
-Transforma Persona a una clase abstracta donde su método estático toHtml(Persona 
-$p) tenga que ser redefinido en todos sus hijos.
+/*012Trabajador.php: Copia las clases del ejercicio anterior y modifícalas.
+Cambia la estructura de clases conforme al gráfico respetando todos los métodos que 
+ya están hechos. Trabajador es una clase abstracta que ahora almacena los teléfonos y 
+donde calcularSueldo es un método abstracto de manera que:
+El sueldo de un Empleado se calcula a partir de las horas trabajadas y lo que cobra por 
+hora. Para los Gerentes, su sueldo se incrementa porcentualmente en base a su edad: 
+salario + salario*edad/100
 */
 
 abstract class Persona {
+
+    
 
     public function __construct(protected String $nombre, protected String $apellidos, protected int $edad)
     {
@@ -42,7 +48,7 @@ abstract class Persona {
         return $this->nombre." ".$this->apellidos;
     }
     //---------------------MODIFICACIÓN PEDIDA----------------------
-    abstract static function toHtml(Persona $p): string;
+    abstract static function toHtml(Persona $p):string;
   
     public function getEdad()
     {

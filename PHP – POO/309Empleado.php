@@ -12,9 +12,9 @@ class Empleado extends Persona{
     private array $arrayTelefono = [];
     private static $sueldoTope = 3333;
 
-    public function __construct(String $nombre,String $apellidos, private int $sueldo = 1000)
+    public function __construct(String $nombre,String $apellidos, Int $edad, private int $sueldo = 1000)
     {
-        parent::__construct($nombre, $apellidos);
+        parent::__construct($nombre, $apellidos, $edad);
     }
   
 
@@ -95,9 +95,10 @@ class Empleado extends Persona{
         if ($p instanceof Empleado) {
             $datosDevueltos = "";
 
-            $datosDevueltos = "<p> <b>Nombre: </b>".$p->getNombreCompleto()."<br><br>
-                               <b>Sueldo: </b>".$p->getSueldo()."<br><br>
-                               <b>Teléfono: </b><ol>
+            $datosDevueltos = "<p><b>Nombre: </b>".$p->getNombreCompleto()."<br><br>
+                                    <b>Edad: </b>".$p->getEdad()."<br><br>
+                                    <b>Sueldo: </b>".$p->getSueldo()."<br><br>
+                                    <b>Teléfono: </b><ol>
                                            ".$p->getTelefono()."
                                            </ol><br>";
                                
@@ -121,5 +122,3 @@ class Empleado extends Persona{
     }   
 
 }
-
-?>

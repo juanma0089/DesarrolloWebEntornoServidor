@@ -106,7 +106,7 @@ class Empleado extends Persona{
         if ($p instanceof Empleado) {
             $datosDevueltos = "";
 
-            $datosDevueltos = "<p> <b>Nombre: </b>".$p->getNombreCompleto()."<br><br>
+            $datosDevueltos = "<p><b>Nombre: </b>".$p->getNombreCompleto()."<br><br>
                                <b>Sueldo: </b>".$p->getSueldo()."<br><br>
                                <b>Teléfono: </b><ol>
                                            ".$p->getTelefono()."
@@ -132,5 +132,3 @@ class Empleado extends Persona{
     }   
 
 }
-
-?>

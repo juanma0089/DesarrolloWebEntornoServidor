@@ -130,12 +130,24 @@ echo $empleado1->__toString($empleado1);
 /*
 include_once('311Empleado.php');
 
-$empleado1 = new Empleado("Juan Manuel","Romalde Marín");
+$empleado1 = new Empleado("Juan Manuel","Romalde Marín", 24);
 $empleado1 -> setSueldo(5000);
-$empleado1 -> setEdad(24);
 $empleado1 -> anyadirTelefono(679673193);
 $empleado1 -> anyadirTelefono(632458164);
 
 echo $empleado1->__toString();
 */
+
+//prueba ejercicio 12
+
+include_once('312Empleado.php');
+
+$empleado1 = new Empleado("Juan Manuel","Romalde Marín", 24);
+
+$empleado1->setHorasTrabajadas(800);
+$empleado1->setPrecioPorHora(10);
+$empleado1->calcularSueldo();
+$empleado1 -> anyadirTelefono(679673193);
+$empleado1 -> anyadirTelefono(632458164);
+echo $empleado1->toHtml($empleado1);
 ?>

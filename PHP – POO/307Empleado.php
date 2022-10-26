@@ -92,7 +92,7 @@ class Empleado extends Persona{
 
     $datosDevueltos = "";
 
-     $datosDevueltos = "<p> <b>Nombre: </b>".$emp->getNombreCompleto()."<br><br>
+     $datosDevueltos = "<p><b>Nombre: </b>".$emp->getNombreCompleto()."<br><br>
                         <b>Sueldo: </b>".$emp->getSueldo()."<br><br>
                         <b>Teléfono: </b><ol>
                                     ".$emp->getTelefono()."
@@ -112,5 +112,3 @@ class Empleado extends Persona{
 }*/
 
 }
-
-?>

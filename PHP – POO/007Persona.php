@@ -45,5 +45,3 @@ class Persona {
         return $this->nombre." ".$this->apellidos;
     }
 }
-
-?>
