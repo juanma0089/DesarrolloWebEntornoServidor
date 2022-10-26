@@ -48,7 +48,7 @@ class Persona {
 
     public static function toHtml(Persona $p):string{
 
-        $datosDevueltos = "<p> <b>Nombre: </b>".$p->getNombreCompleto()."</p>";
+        $datosDevueltos = "<p> <b>Nombre: </b>".$p->getNombreCompleto()."<br>".$p->getEdad()."</p>";
 
         return $datosDevueltos;
     }

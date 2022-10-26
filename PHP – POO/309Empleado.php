@@ -10,7 +10,7 @@ class Empleado extends Persona{
 
 
     private array $arrayTelefono = [];
-    public static $sueldoTope = 3333;
+    private static $sueldoTope = 3333;
 
     public function __construct(String $nombre,String $apellidos, private int $sueldo = 1000)
     {
@@ -103,7 +103,7 @@ class Empleado extends Persona{
                                
            if($p->debePagarImpuestos() == true){
        
-               $pagaImpuestos = "Debe pagar impuestos al superar los <b>".$p->getSueldoTope()."</b> ya que su sueldo es de <b>".$p->getSueldo()."€</b> y tener <b>".$p->getEdad()."</b></p>";
+               $pagaImpuestos = "Debe pagar impuestos al superar los <b>".$p->getSueldoTope()."</b> ya que su sueldo es de <b>".$p->getSueldo()."€</b> y tener <b>".$p->getEdad()." años</b></p>";
                
            }else{
                
@@ -114,10 +114,10 @@ class Empleado extends Persona{
                return $datosDevueltos.$pagaImpuestos;
         }else{
 
-            $datosDevueltos = "<p> <b>Nombre: </b>".$p->getNombreCompleto()."</p>";
+           return parent::toHtml($p);
 
         }
-            return $datosDevueltos;
+            
     }   
 
 }
