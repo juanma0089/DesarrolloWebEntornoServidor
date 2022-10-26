@@ -43,7 +43,7 @@ abstract class Persona {
 
         return $this->nombre." ".$this->apellidos;
     }
-
+    //---------------------MODIFICACIÓN PEDIDA----------------------
     abstract static function toHtml(Persona $p):string;
   
     public function getEdad()
@@ -57,8 +57,6 @@ abstract class Persona {
 
         return $this;
     }
-
-    //---------------------MODIFICACIÓN PEDIDA----------------------
 
     public function __toString()
     {
