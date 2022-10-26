@@ -139,7 +139,7 @@ echo $empleado1->__toString();
 */
 
 //prueba ejercicio 12
-
+/*
 include_once('312Empleado.php');
 
 $empleado1 = new Empleado("Juan Manuel","Romalde Marín", 24);
@@ -150,4 +150,35 @@ $empleado1->calcularSueldo();
 $empleado1 -> anyadirTelefono(679673193);
 $empleado1 -> anyadirTelefono(632458164);
 echo $empleado1->toHtml($empleado1);
+
+include_once('012Gerente.php');
+
+$empleado1 = new Gerente("Juan Manuel","Romalde Marín", 24);
+$empleado1->setSalario(800);
+$empleado1->calcularSueldo();
+$empleado1 -> anyadirTelefono(679673193);
+$empleado1 -> anyadirTelefono(632458164);
+echo $empleado1->toHtml($empleado1);
+*/
+//prueba ejercicio 13
+/*
+include_once('013Empresa.php');
+
+$empresa = new Empresa("HOli", "coli");
+
+$gerente1 = new Gerente("juanma", "r",33);
+$gerente1->setSalario(800);
+$gerente1->calcularSueldo();
+
+$empleado2 = new Empleado("jaimito", "m",25);
+$empleado2->setPrecioPorHora(10);
+$empleado2->setHorasTrabajadas(800);
+$empleado2->calcularSueldo();
+
+$empresa -> anyadirTrabajador($gerente1);
+$empresa -> anyadirTrabajador($empleado2);
+
+echo $empresa->listarTrabajadoresHtml();
+
+*/
 ?>
