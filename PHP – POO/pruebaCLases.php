@@ -125,4 +125,17 @@ $empleado1 -> anyadirTelefono(632458164);
 echo $empleado1->__toString($empleado1);
 */
 
+
+//prueba ejercicio 11
+/*
+include_once('311Empleado.php');
+
+$empleado1 = new Empleado("Juan Manuel","Romalde Marín");
+$empleado1 -> setSueldo(5000);
+$empleado1 -> setEdad(24);
+$empleado1 -> anyadirTelefono(679673193);
+$empleado1 -> anyadirTelefono(632458164);
+
+echo $empleado1->__toString();
+*/
 ?>
