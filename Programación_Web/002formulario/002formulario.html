@@ -1,0 +1,116 @@
+<!-- 002formulario.html/.php: Crea un formulario que solicite:
+Nombre y apellidos. Email. URL página personal. Sexo (radio). Número de convivientes 
+en el domicilio. Aficiones (checkboxes) – poner mínimo 4 valores.
+Menú favorito (lista selección múltiple) – poner mínimo 4 valores.
+Muestra los valores cargados en una tabla-resumen.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>002formulario</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <script defer src="../js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+    <div class="container fluid">
+        <form class="row g-3 needs-validation" action="002formulario.php" method="POST">
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="validationCustom01" name="nombre" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="validationCustom02" name="apellidos" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                  <label for="" class="form-label">Email</label>
+                  <input type="email" class="form-control" name="email" id="" aria-describedby="emailHelpId" placeholder="abc@mail.com">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom03" class="form-label">URL página personal</label>
+                <input type="url" class="form-control" id="validationCustom03" name="url">
+                <div class="invalid-feedback">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="col-md-2">
+                    <div>Sexo</div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sexo" value="hombre" id="hombre">
+                        <label class="form-check-label" for="hombre">
+                            Hombre
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sexo" value="mujer" id="mujer">
+                        <label class="form-check-label" for="mujer">
+                            Mujer
+                        </label>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-3">
+                    <label for="validationCustom05" class="form-label">Nº de convivientes</label>
+                    <input type="number" class="form-control" id="validationCustom05" required min="1" name="convivientes" value="convivientes">
+                    <div class="invalid-feedback">
+                        Introduzca número de convivientes.
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div><label for="">Aficiones</label></div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="aficion[]" value="Fútbol" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault" >
+                            Fútbol
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="aficion[]" value="Juegos pc" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked" >
+                            Juegos pc
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="aficion[]" value="Películas" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Películas
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="aficion[]" value="Series" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Series
+                        </label>
+                    </div>
+                </div>
+                <label for="validationCustom05" class="form-label">Menú favoritos</label>
+                <select name="menu[]" multiple="true" class="col-md-3">
+                    <option value="BBQ pizza telepi" name="menu1">BBQ pizza telepi</option>
+                    <option value="Alitas de pollo" name="menu2">Alitas de pollo</option>
+                    <option value="Tallarines con ternera" name="menu3">Tallarines con ternera</option>
+                    <option value="Patatas rancheras" name="menu4">Patatas rancheras</option>
+                </select>
+                <div class="col-12">
+                    <br>
+                    <input class="btn btn-primary" name="enviar" type="submit"></input>
+                </div>
+            
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+
